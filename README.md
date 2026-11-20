@@ -1,2 +1,3 @@
 # Daily-Smart-Finds
-Daily Smarts
+
+Official website for Daily Smart Finds, featuring curated daily deals and smart essentials.

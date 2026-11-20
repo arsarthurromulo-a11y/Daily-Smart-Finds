@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Contact | Daily Smart Finds</title><script src="https://cdn.tailwindcss.com"></script></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Daily Smart Finds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { charcoal: '#20252B', steel: '#4F7194', ivory: '#F8F6F0' } } } }</script>
+</head>
 <body class="bg-ivory text-charcoal">
-    <nav class="bg-white p-4"><div class="container mx-auto"><a href="index.html" class="font-bold">Daily Smart Finds</a></div></nav>
-    <main class="container mx-auto py-10 px-4">
+    <nav class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-steel">Daily Smart Finds</a>
+            <div class="space-x-4 text-sm font-medium">
+                <a href="tech.html" class="hover:text-steel">Tech</a>
+                <a href="home.html" class="hover:text-steel">Home</a>
+                <a href="guides.html" class="hover:text-steel">Guides</a>
+                <a href="about.html" class="hover:text-steel">About</a>
+                <a href="contact.html" class="hover:text-steel">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto py-10 px-4 min-h-[60vh]">
         <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
-        <form class="max-w-md space-y-4">
-            <input type="text" placeholder="Name" class="w-full p-2 border">
-            <input type="email" placeholder="Email" class="w-full p-2 border">
-            <textarea placeholder="Message" class="w-full p-2 border"></textarea>
-            <button class="bg-steel text-white px-4 py-2">Send</button>
+        <form class="max-w-md space-y-4" onsubmit="alert('Message sent successfully!'); return false;">
+            <input type="text" placeholder="Name" required class="w-full p-2 border border-gray-300 rounded">
+            <input type="email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded">
+            <textarea placeholder="Message" required class="w-full p-2 border border-gray-300 rounded h-32"></textarea>
+            <button type="submit" class="bg-steel text-white px-6 py-2 rounded hover:bg-opacity-90">Send</button>
         </form>
     </main>
+    <footer class="bg-charcoal text-white py-10 text-center">
+        <div class="space-x-4 mb-4">
+            <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+            <a href="disclosure.html" class="hover:underline">Affiliate Disclosure</a>
+        </div>
+        <p>&copy; 2023 Daily Smart Finds. All rights reserved.</p>
+    </footer>
 </body>
 </html>
